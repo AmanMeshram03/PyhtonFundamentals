@@ -1,0 +1,14 @@
+hourly_cost = 0.51
+
+
+daily_cost = hourly_cost * 24
+weekly_cost = daily_cost * 7
+monthly_cost = daily_cost * 30  # assuming 30 days in a month
+
+budget = 918
+days_with_budget = budget / daily_cost
+
+print(f"Cost to operate one server per day: ${daily_cost:.2f}")
+print(f"Cost to operate one server per week: ${weekly_cost:.2f}")
+print(f"Cost to operate one server per month: ${monthly_cost:.2f}")
+print(f"With ${budget}, you can operate one server for about {days_with_budget:.2f} days.")
