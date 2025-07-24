@@ -1,0 +1,82 @@
+# Q1: Check if a number is Positive, Negative, or Zero
+def check_sign(num):
+    if num > 0:
+        print("Positive")
+    elif num < 0:
+        print("Negative")
+    else:
+        print("Zero")
+
+# Q2: Check if a number is Odd or Even
+def check_even_odd(num):
+    if num % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+# Q3: Check if two non-negative numbers have the same last digit
+def same_last_digit(a, b):
+    if a >= 0 and b >= 0 and a % 10 == b % 10:
+        print("True")
+    else:
+        print("False")
+
+# Q4: Print numbers from 1 to 10 in a single row with tab space
+def print_1_to_10_tabbed():
+    for i in range(1, 11):
+        print(i, end="\t")
+    print()
+
+# Q5: Print even numbers between 23 and 57 (each in new row)
+def print_even_23_to_57():
+    for i in range(23, 58):
+        if i % 2 == 0:
+            print(i)
+
+# Q6: Check if a number is prime
+def is_prime(n):
+    if n <= 1:
+        print("Not Prime")
+        return
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            print("Not Prime")
+            return
+    print("Prime")
+
+# Q7: Print prime numbers between 10 and 99
+def print_primes_10_to_99():
+    for num in range(10, 100):
+        for i in range(2, int(num**0.5)+1):
+            if num % i == 0:
+                break
+        else:
+            print(num)
+
+# Q8: Print sum of all digits of a number
+def sum_of_digits(n):
+    total = 0
+    while n > 0:
+        total += n % 10
+        n //= 10
+    print("Sum of digits:", total)
+
+# Q9: Reverse a number and print
+def reverse_number(n):
+    rev = 0
+    while n > 0:
+        rev = rev * 10 + n % 10
+        n //= 10
+    print("Reversed Number:", rev)
+    return rev
+
+# Q10: Check if number is palindrome
+def is_palindrome(n):
+    original = n
+    reversed_num = reverse_number(n)
+    if original == reversed_num:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+
+
